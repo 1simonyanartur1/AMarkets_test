@@ -45,7 +45,7 @@ export function stock() {
     }
 
     updateTimer();
-    timeInterval = setInterval(updateTimer, 1000);
+    timeInterval = setInterval(updateTimer, 60000);
   }
 
   function initialiseCountdownTimers({
