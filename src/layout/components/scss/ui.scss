@@ -1,0 +1,14 @@
+body {
+	position: relative;
+	font: 400 14px/1 $main-font;
+}
+
+.main {
+	overflow: hidden;
+}
+
+.container {
+	max-width: $container-pc;
+	width: 100%;
+	margin: 0 auto;
+}

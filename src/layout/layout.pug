@@ -1,0 +1,25 @@
+include components/pug/mixin.pug
+include components/pug/ui.pug
+
+doctype
+html
+	head
+		block head
+			include components/pug/meta.pug
+			include components/pug/links.pug
+
+			block head-inner
+	body
+		block body-top
+			block header
+				//- include blocks/header/header.pug
+
+		main.main#main
+			block main
+
+			block footer
+				//- include blocks/footer/footer.pug
+
+		block body-bottom
+			block body-bottom-inner
+			include components/pug/scripts.pug
