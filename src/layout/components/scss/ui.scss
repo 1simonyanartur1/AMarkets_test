@@ -1,6 +1,8 @@
 body {
 	position: relative;
 	font: 400 14px/1 $main-font;
+	background: #fff;
+	color: $dark;
 }
 
 .main {
@@ -8,7 +10,97 @@ body {
 }
 
 .container {
-	max-width: $container-pc;
+	max-width: $container;
 	width: 100%;
 	margin: 0 auto;
+
+	@include max-screen($tablet-large) {
+		padding: 0 15px;
+	}
+}
+
+.close {
+	border-radius: 50%;
+	width: 40px;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: 1px solid $red_brown;
+	cursor: pointer;
+	transition: .3s;
+
+	svg {
+		display: block;
+		width: 24px;
+
+		path {
+			transition: .3s;
+		}
+	}
+	
+	@media (any-hover) {
+		&:hover {
+			border-color: $dark;
+			background: $dark;
+
+			svg {
+				path {
+					stroke: $white;
+				}
+			}
+		}
+	}
+}
+
+.btn {
+	display: inline-block;
+	padding: 16px 32px;
+	border-radius: 4px;
+	font-size: 15px;
+	line-height: 24px;
+	text-decoration: none;
+	transition: .3s;
+
+	@include max-screen($mobile-large) {
+		padding: 10px 22px;
+	}
+	
+	&_orange {
+		background: $orange;
+		color: $white;
+
+		@media (any-hover) {
+			&:hover {
+				background: $dark;
+			}
+		}
+	}
+}
+
+.logo {
+
+	svg {
+		display: block;
+		width: 84px;
+
+		@include max-screen($tablet-mini) {
+			width: 95px;
+		}
+
+		path {
+			transition: .3s;
+		}
+	}
+
+	@media (any-hover) {
+		&:hover {
+			svg {
+				path {
+					fill: $orange;
+				}
+			}
+		}
+	}
+	
 }

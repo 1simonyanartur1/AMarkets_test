@@ -7,11 +7,17 @@ $img: '../img/';
 	* Цвета
 */
 
+$red_light: #FFF1E6;
+$red_brown: #FEE3CC;
+$dark: #171717;
+$dark2: #111827;
+$white: #fff;
+$orange: #FB7101;
+
 /*
 	* Шрифты
 */
-$main-font: '', 'Arial', 'Helvetica', sans-serif;
-$second-font: '', 'Arial', 'Helvetica', sans-serif;
+$main-font: 'HelveticaNeue', 'Arial', 'Helvetica', sans-serif;
 
 /*
 	* Тени
@@ -24,5 +30,13 @@ $second-font: '', 'Arial', 'Helvetica', sans-serif;
 /*
 	* Размеры
 */
-$container-pc: 1580px;
-$container-mb: 1200px;
+$container: 1200px;
+
+
+$pc-medium: 1620px;
+$tablet-large: 1200px;
+$tablet-middle: 900px;
+$tablet-mini: 750px;
+$mobile-large: 599px;
+$mobile-medium: 400px;
+$mobile-small: 350px;

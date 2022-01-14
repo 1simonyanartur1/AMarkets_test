@@ -44,7 +44,7 @@
 	? Адаптивный размер шрифта
 	* @include fz(18, 8);
 */
-$templateSize: 1920 - 17; // 17 its width of scrollbar
+$templateSize: 1440; // 17 its width of scrollbar
 @mixin fz($pcSize, $mobSize) {
 	$addSize: $pcSize - $mobSize;
 	$addMobSize: $addSize + $addSize * 0.7;
@@ -65,8 +65,8 @@ $templateSize: 1920 - 17; // 17 its width of scrollbar
 @mixin value($property, $value, $min-value) {
 	#{$property}: $value + px;
 
-	@media (max-width: 1920px) {
-		#{$property}: calc(#{$min-value + px} + #{($value - $min-value)} * ((100vw - 320px) / #{1920 - 320}));
+	@media (max-width: 1440px) {
+		#{$property}: calc(#{$min-value + px} + #{($value - $min-value)} * ((100vw - 320px) / #{1440 - 320}));
 	}
 }
 

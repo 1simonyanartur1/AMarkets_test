@@ -10,15 +10,16 @@ html
 
 			block head-inner
 	body
+		+stock
+
 		block body-top
 			block header
-				//- include blocks/header/header.pug
+				include blocks/header/header.pug
 
-		main.main#main
-			block main
+			main.main#main
+				block main
 
 			block footer
-				//- include blocks/footer/footer.pug
 
 		block body-bottom
 			block body-bottom-inner

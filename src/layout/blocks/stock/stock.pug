@@ -1,0 +1,19 @@
+mixin stock
+	section.stock.js-stock
+		.container
+			.stock-caption
+				.stock-caption__title Успейте принять участие в конкурсе
+				.stock-caption__subtitle до конца конкурса осталось
+			.timer.js-countdown(data-countdown-end='January 18, 2022 23:59:59')
+				.timer-item
+					span.timer__num.js-countdown-days 0
+					span.timer__text Дней
+				.timer-item
+					span.timer__num.js-countdown-hours 0
+					span.timer__text Часов
+				.timer-item
+					span.timer__num.js-countdown-minutes 0
+					span.timer__text Минут
+			button.close.stock__close.js-stock-close
+				+close-icon
+

@@ -1,0 +1,70 @@
+.header {
+	padding: 28px 0;
+
+	@include max-screen($tablet-middle) {
+		padding: 14px 0;
+	}
+
+	.container {
+		display: flex;
+		align-items: flex-end;
+		justify-content: space-between;
+	}
+}
+
+.menu {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+
+	@include max-screen($tablet-mini) {
+		flex-direction: column;
+		align-items: flex-end;
+	}
+
+	&-item {
+		&:not(:last-child) {
+			margin-right: 45px;
+
+			@include max-screen($tablet-mini) {
+				margin-right: 0;
+			}
+		}
+	}
+
+	&__link {
+		color: $dark2;
+		text-decoration: none;
+		font-size: 15px;
+		line-height: 24px;
+
+		@include max-screen($tablet-mini) {
+			font-size: 14px;
+			line-height: 18px;
+		}
+
+		&:after {
+			content: '';
+			display: block;
+			height: 2px;
+			background: $orange;
+			transition: .3s;
+			width: 100%;
+			opacity: 0;
+		}
+
+		@media (any-hover) {
+			&:hover {
+				&:after {
+					opacity: 1;
+				}
+			}
+		}
+		
+		&.active {
+			&:after {
+				opacity: 1;
+			}
+		}
+	}
+}
